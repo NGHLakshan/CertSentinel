@@ -6,6 +6,7 @@ import {
 } from 'recharts'
 import './index.css'
 import GeoIPMap from './GeoIPMap'
+import HistoricalAnalytics from './HistoricalAnalytics'
 
 const WS_URL = 'ws://localhost:8000/ws'
 const BAR_COLORS = ['#e63946', '#f4a261', '#2a9d8f', '#457b9d', '#a8dadc', '#e9c46a', '#264653', '#6a4c93']
@@ -326,6 +327,9 @@ export default function App() {
           <GeoIPMap alerts={alerts} />
         </div>
       </section>
+
+      {/* ── Historical Analytics ──────────────────────────────────── */}
+      <HistoricalAnalytics />
 
       {/* ── Charts ─────────────────────────────────────────────────── */}
       <section className="charts-grid">

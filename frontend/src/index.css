@@ -596,6 +596,105 @@ body {
   color: var(--teal);
 }
 
+/* ── Historical Analytics ─────────────────────────────────────────── */
+.analytics-section {
+  margin: 0 2rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem 1.8rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.analytics-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.analytics-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.analytics-desc {
+  font-size: .78rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.analytics-toggle {
+  display: flex;
+  gap: .35rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .25rem;
+}
+
+.analytics-toggle-btn {
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: .3rem .8rem;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+}
+
+.analytics-toggle-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.analytics-toggle-btn:hover:not(.active) {
+  background: var(--border);
+  color: var(--text);
+}
+
+.analytics-chart-wrap {
+  position: relative;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analytics-chart-wrap>.recharts-responsive-container {
+  width: 100% !important;
+}
+
+.analytics-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+}
+
+.analytics-tooltip {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: .6rem 1rem;
+  font-size: .82rem;
+}
+
+.analytics-tooltip-label {
+  color: var(--text-muted);
+  font-size: .72rem;
+  margin-bottom: .25rem;
+}
+
+.analytics-tooltip-value {
+  color: var(--text);
+}
+
 /* ── Responsive Mobile Layout ────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .header {
@@ -663,7 +762,7 @@ body {
   .stats {
     grid-template-columns: 1fr;
   }
-  
+
   .scan-features {
     grid-template-columns: 1fr;
   }

@@ -160,6 +160,46 @@ async def scan_link(payload: dict = Body(...)):
 
 
 
+# ─── Historical Analytics API ────────────────────────────────────────────────
+@app.get("/api/analytics")
+async def get_analytics(view: str = "daily"):
+    """Return daily or weekly aggregated threat counts from the stored CSV."""
+    csv_file = os.path.join(os.path.dirname(__file__), 'live_suspicious_domains.csv')
+    counts: dict = {}
+
+    if os.path.isfile(csv_file):
+        try:
+            with open(csv_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    ts_str = row.get("Timestamp", "").strip()
+                    if not ts_str:
+                        continue
+                    try:
+                        dt = datetime.strptime(ts_str, '%Y-%m-%d %H:%M:%S')
+                    except ValueError:
+                        continue
+
+                    if view == "weekly":
+                        # ISO week label: "2025-W28"
+                        label = f"{dt.isocalendar()[0]}-W{dt.isocalendar()[1]:02d}"
+                    else:
+                        # Daily label: "2025-07-10"
+                        label = dt.strftime('%Y-%m-%d')
+
+                    counts[label] = counts.get(label, 0) + 1
+        except Exception as e:
+            print(f"⚠️ Analytics read error: {e}")
+
+    # Sort labels chronologically and limit window
+    sorted_labels = sorted(counts.keys())
+    limit = 8 if view == "weekly" else 7
+    sorted_labels = sorted_labels[-limit:]
+
+    result = [{"label": lbl, "count": counts[lbl]} for lbl in sorted_labels]
+    return {"view": view, "data": result}
+
+
 # ─── GeoIP Location ──────────────────────────────────────────────────────────
 GEOIP_DB_PATH = os.path.join(os.path.dirname(__file__), 'GeoLite2-City.mmdb')
 GEOIP_DB_URL = "https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-City.mmdb"
