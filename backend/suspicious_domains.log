@@ -265,3 +265,29 @@ AssertionError: write() before start_response
 2026-07-09 21:15:03 - [Errno 11001] getaddrinfo failed - goodbye
 2026-07-09 21:15:08 - Error connecting to CertStream - [Errno 11001] getaddrinfo failed - Sleeping for a few seconds and trying again...
 2026-07-09 21:15:08 - [Errno 11001] getaddrinfo failed - goodbye
+2026-07-10 13:25:37 - Websocket connected
+2026-07-10 13:25:37 - Connection established to CertStream! Listening for events...
+2026-07-10 13:25:46 - SUSPICIOUS (SIMULATED): fake-support-update.io
+2026-07-10 13:27:38 - SUSPICIOUS (SIMULATED): fake-login-auth.com
+2026-07-10 13:27:53 - SUSPICIOUS (SIMULATED): fake-bank-account.xyx
+2026-07-10 13:28:12 - SUSPICIOUS (SIMULATED): fake-support-support.net
+2026-07-10 13:28:17 - SUSPICIOUS (SIMULATED): fake-support-login.com
+2026-07-10 13:28:24 - SUSPICIOUS (SIMULATED): fake-secure-auth.net
+2026-07-10 13:31:11 - SUSPICIOUS (SIMULATED): fake-verify-support.com
+2026-07-10 13:31:49 - SUSPICIOUS (SIMULATED): fake-bank-verify.xyx
+2026-07-10 13:31:53 - SUSPICIOUS (SIMULATED): fake-auth-update.xyx
+2026-07-10 13:32:57 - SUSPICIOUS (SIMULATED): fake-bank-login.net
+2026-07-10 13:33:28 - SUSPICIOUS (SIMULATED): fake-secure-web.io
+2026-07-10 13:33:55 - SUSPICIOUS (SIMULATED): fake-account-verify.net
+2026-07-10 13:35:23 - SUSPICIOUS (SIMULATED): fake-verify-support.net
+2026-07-10 13:36:33 - SUSPICIOUS (SIMULATED): fake-bank-account.io
+2026-07-10 13:36:36 - SUSPICIOUS (SIMULATED): fake-verify-verify.net
+2026-07-10 13:38:01 - SUSPICIOUS (SIMULATED): fake-paypal-login.io
+2026-07-10 13:40:03 - SUSPICIOUS (SIMULATED): fake-login-login.com
+2026-07-10 13:40:48 - SUSPICIOUS (SIMULATED): fake-login-verify.net
+2026-07-10 13:42:03 - SUSPICIOUS (SIMULATED): fake-secure-update.org
+2026-07-10 13:42:26 - SUSPICIOUS (SIMULATED): fake-account-paypal.org
+2026-07-10 13:42:49 - SUSPICIOUS (SIMULATED): fake-account-secure.xyx
+2026-07-10 13:42:51 - SUSPICIOUS (SIMULATED): fake-auth-bank.xyx
+2026-07-10 13:43:23 - SUSPICIOUS (SIMULATED): fake-paypal-secure.com
+2026-07-10 13:44:20 - SUSPICIOUS (SIMULATED): fake-update-paypal.net

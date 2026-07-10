@@ -41,3 +41,9 @@ Timestamp,Domain,Keyword,TLD,Risk_Score,Country,Lat,Lon
 2026-07-10 13:38:00,fake-paypal-login.io,login,.io,100,XX,-27.393577138334074,7.629415874338719
 2026-07-10 13:40:02,fake-login-login.com,login,.com,100,DE,51.2993,9.491
 2026-07-10 13:40:47,fake-login-verify.net,login,.net,100,DE,51.2993,9.491
+2026-07-10 13:42:02,fake-secure-update.org,secure,.org,100,XX,52.877273246856916,-39.064034424087566
+2026-07-10 13:42:26,fake-account-paypal.org,account,.org,100,US,37.751,-97.822
+2026-07-10 13:42:49,fake-account-secure.xyx,secure,.xyx,100,XX,-19.63654762109183,-132.8115366446647
+2026-07-10 13:42:51,fake-auth-bank.xyx,bank,.xyx,100,XX,-56.774838742046555,105.19221299742779
+2026-07-10 13:43:23,fake-paypal-secure.com,secure,.com,100,SE,59.3287,18.0717
+2026-07-10 13:44:20,fake-update-paypal.net,paypal,.net,100,XX,26.999250554865213,24.806793265203936
