@@ -1,0 +1,267 @@
+2026-07-05 11:01:55 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.8.128:5000
+2026-07-05 11:01:55 - [33mPress CTRL+C to quit[0m
+2026-07-05 11:02:04 - Websocket connected
+2026-07-05 11:02:04 - Connection established to CertStream! Listening for events...
+2026-07-05 11:17:27 - 127.0.0.1 - - [05/Jul/2026 11:17:27] "[35m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 500 -
+2026-07-05 11:17:27 - Error on request:
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\werkzeug\serving.py", line 371, in run_wsgi
+    execute(self.server.app)
+  File "C:\Python312\Lib\site-packages\werkzeug\serving.py", line 337, in execute
+    write(b"")
+  File "C:\Python312\Lib\site-packages\werkzeug\serving.py", line 262, in write
+    assert status_set is not None, "write() before start_response"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: write() before start_response
+2026-07-05 11:23:42 - Websocket connected
+2026-07-05 11:23:42 - Connection established to CertStream! Listening for events...
+2026-07-05 11:32:01 - Websocket connected
+2026-07-05 11:32:01 - Connection established to CertStream! Listening for events...
+2026-07-05 11:34:37 - Websocket connected
+2026-07-05 11:34:37 - Connection established to CertStream! Listening for events...
+2026-07-05 11:37:26 - Websocket connected
+2026-07-05 11:37:26 - Connection established to CertStream! Listening for events...
+2026-07-05 11:39:32 - Websocket connected
+2026-07-05 11:39:32 - Connection established to CertStream! Listening for events...
+2026-07-05 11:43:44 - Websocket connected
+2026-07-05 11:43:44 - Connection established to CertStream! Listening for events...
+2026-07-05 11:44:12 - SUSPICIOUS (SIMULATED): fake-secure-support.xyx
+2026-07-05 11:44:44 - SUSPICIOUS (SIMULATED): fake-auth-paypal.net
+2026-07-05 11:47:32 - SUSPICIOUS (SIMULATED): fake-update-verify.org
+2026-07-05 11:49:52 - SUSPICIOUS (SIMULATED): fake-account-support.io
+2026-07-05 11:50:59 - SUSPICIOUS (SIMULATED): fake-secure-web.com
+2026-07-05 11:52:32 - SUSPICIOUS (SIMULATED): fake-support-update.io
+2026-07-05 11:53:09 - SUSPICIOUS (SIMULATED): fake-support-auth.io
+2026-07-05 11:53:28 - SUSPICIOUS (SIMULATED): fake-support-paypal.com
+2026-07-05 11:54:24 - SUSPICIOUS (SIMULATED): fake-paypal-account.xyx
+2026-07-07 12:26:02 - Websocket connected
+2026-07-07 12:26:02 - Connection established to CertStream! Listening for events...
+2026-07-07 12:26:25 - SUSPICIOUS (SIMULATED): fake-auth-account.net
+2026-07-07 12:27:12 - SUSPICIOUS (SIMULATED): fake-update-web.org
+2026-07-07 12:28:16 - SUSPICIOUS (SIMULATED): fake-web-paypal.xyx
+2026-07-07 12:28:27 - SUSPICIOUS (SIMULATED): fake-update-update.io
+2026-07-07 12:28:40 - SUSPICIOUS (SIMULATED): fake-account-verify.io
+2026-07-07 12:28:49 - SUSPICIOUS (SIMULATED): fake-support-account.org
+2026-07-07 12:28:51 - SUSPICIOUS (SIMULATED): fake-secure-bank.xyx
+2026-07-07 12:29:00 - SUSPICIOUS (SIMULATED): fake-bank-account.io
+2026-07-07 12:29:00 - SUSPICIOUS (SIMULATED): fake-login-bank.com
+2026-07-07 12:29:06 - SUSPICIOUS (SIMULATED): fake-account-verify.net
+2026-07-07 12:29:17 - SUSPICIOUS (SIMULATED): fake-update-secure.org
+2026-07-07 12:29:47 - SUSPICIOUS (SIMULATED): fake-secure-secure.org
+2026-07-07 12:30:29 - SUSPICIOUS (SIMULATED): fake-verify-support.xyx
+2026-07-07 12:31:33 - SUSPICIOUS (SIMULATED): fake-update-web.net
+2026-07-07 12:32:06 - SUSPICIOUS (SIMULATED): fake-bank-bank.com
+2026-07-07 12:32:07 - SUSPICIOUS (SIMULATED): fake-verify-secure.xyx
+2026-07-07 12:32:20 - SUSPICIOUS (SIMULATED): fake-auth-paypal.com
+2026-07-07 12:34:35 - SUSPICIOUS (SIMULATED): fake-web-bank.net
+2026-07-07 12:35:36 - SUSPICIOUS (SIMULATED): fake-secure-paypal.net
+2026-07-07 12:35:44 - SUSPICIOUS (SIMULATED): fake-account-auth.org
+2026-07-07 12:36:47 - SUSPICIOUS (SIMULATED): fake-account-update.org
+2026-07-07 12:37:40 - SUSPICIOUS (SIMULATED): fake-support-support.org
+2026-07-07 12:39:02 - SUSPICIOUS (SIMULATED): fake-verify-account.xyx
+2026-07-07 12:40:03 - SUSPICIOUS (SIMULATED): fake-paypal-update.net
+2026-07-07 12:40:39 - SUSPICIOUS (SIMULATED): fake-verify-login.org
+2026-07-07 12:40:44 - SUSPICIOUS (SIMULATED): fake-support-verify.io
+2026-07-07 12:41:36 - SUSPICIOUS (SIMULATED): fake-web-web.com
+2026-07-07 12:42:17 - SUSPICIOUS (SIMULATED): fake-secure-account.io
+2026-07-07 12:43:22 - Websocket connected
+2026-07-07 12:43:22 - Connection established to CertStream! Listening for events...
+2026-07-07 12:43:52 - SUSPICIOUS (SIMULATED): fake-support-secure.xyx
+2026-07-07 12:44:09 - SUSPICIOUS (SIMULATED): fake-login-update.io
+2026-07-07 12:44:53 - SUSPICIOUS (SIMULATED): fake-verify-auth.com
+2026-07-07 12:45:39 - SUSPICIOUS (SIMULATED): fake-auth-update.net
+2026-07-07 12:46:11 - SUSPICIOUS (SIMULATED): fake-verify-paypal.xyx
+2026-07-07 12:46:17 - SUSPICIOUS (SIMULATED): fake-login-secure.net
+2026-07-07 12:47:46 - SUSPICIOUS (SIMULATED): fake-account-update.com
+2026-07-07 12:48:13 - SUSPICIOUS (SIMULATED): fake-login-login.io
+2026-07-07 12:49:15 - SUSPICIOUS (SIMULATED): fake-auth-bank.io
+2026-07-07 12:50:01 - SUSPICIOUS (SIMULATED): fake-secure-support.net
+2026-07-07 12:50:09 - SUSPICIOUS (SIMULATED): fake-verify-verify.net
+2026-07-07 12:52:06 - SUSPICIOUS (SIMULATED): fake-verify-secure.io
+2026-07-07 12:52:50 - SUSPICIOUS (SIMULATED): fake-bank-update.net
+2026-07-07 12:53:11 - SUSPICIOUS (SIMULATED): fake-auth-bank.io
+2026-07-07 12:53:46 - SUSPICIOUS (SIMULATED): fake-bank-account.net
+2026-07-07 12:56:03 - SUSPICIOUS (SIMULATED): fake-secure-update.io
+2026-07-07 12:56:03 - SUSPICIOUS (SIMULATED): fake-auth-account.io
+2026-07-07 12:58:56 - SUSPICIOUS (SIMULATED): fake-auth-account.io
+2026-07-07 12:59:05 - SUSPICIOUS (SIMULATED): fake-support-support.org
+2026-07-07 12:59:25 - SUSPICIOUS (SIMULATED): fake-update-support.net
+2026-07-07 13:00:06 - SUSPICIOUS (SIMULATED): fake-bank-paypal.net
+2026-07-07 13:02:02 - SUSPICIOUS (SIMULATED): fake-update-auth.io
+2026-07-07 13:02:34 - SUSPICIOUS (SIMULATED): fake-support-auth.io
+2026-07-07 13:03:17 - SUSPICIOUS (SIMULATED): fake-auth-auth.io
+2026-07-07 13:03:58 - SUSPICIOUS (SIMULATED): fake-web-paypal.io
+2026-07-07 13:05:01 - SUSPICIOUS (SIMULATED): fake-verify-paypal.xyx
+2026-07-07 13:05:10 - SUSPICIOUS (SIMULATED): fake-login-paypal.xyx
+2026-07-07 13:05:59 - SUSPICIOUS (SIMULATED): fake-secure-login.io
+2026-07-07 13:06:38 - SUSPICIOUS (SIMULATED): fake-login-verify.com
+2026-07-07 13:08:05 - SUSPICIOUS (SIMULATED): fake-secure-login.com
+2026-07-07 13:09:04 - SUSPICIOUS (SIMULATED): fake-bank-web.io
+2026-07-07 13:10:21 - SUSPICIOUS (SIMULATED): fake-paypal-paypal.org
+2026-07-07 13:10:32 - SUSPICIOUS (SIMULATED): fake-paypal-web.com
+2026-07-07 13:10:35 - SUSPICIOUS (SIMULATED): fake-login-account.xyx
+2026-07-07 13:11:32 - SUSPICIOUS (SIMULATED): fake-support-paypal.org
+2026-07-07 13:11:57 - SUSPICIOUS (SIMULATED): fake-bank-bank.org
+2026-07-07 13:12:25 - SUSPICIOUS (SIMULATED): fake-paypal-bank.io
+2026-07-07 13:12:37 - SUSPICIOUS (SIMULATED): fake-update-support.xyx
+2026-07-07 13:12:39 - SUSPICIOUS (SIMULATED): fake-auth-secure.xyx
+2026-07-07 13:12:57 - SUSPICIOUS (SIMULATED): fake-bank-bank.io
+2026-07-07 13:13:13 - SUSPICIOUS (SIMULATED): fake-auth-verify.xyx
+2026-07-07 13:13:25 - SUSPICIOUS (SIMULATED): fake-paypal-secure.net
+2026-07-07 13:13:32 - SUSPICIOUS (SIMULATED): fake-secure-auth.org
+2026-07-07 13:14:46 - SUSPICIOUS (SIMULATED): fake-web-update.net
+2026-07-07 13:15:15 - SUSPICIOUS (SIMULATED): fake-web-account.io
+2026-07-07 13:15:21 - SUSPICIOUS (SIMULATED): fake-web-verify.xyx
+2026-07-07 13:15:54 - SUSPICIOUS (SIMULATED): fake-secure-secure.net
+2026-07-07 13:16:36 - SUSPICIOUS (SIMULATED): fake-paypal-bank.com
+2026-07-07 13:17:11 - SUSPICIOUS (SIMULATED): fake-paypal-secure.net
+2026-07-07 13:17:37 - SUSPICIOUS (SIMULATED): fake-verify-verify.net
+2026-07-07 13:19:37 - Websocket connected
+2026-07-07 13:19:37 - Connection established to CertStream! Listening for events...
+2026-07-07 13:19:59 - SUSPICIOUS (SIMULATED): fake-web-auth.xyx
+2026-07-07 13:21:06 - SUSPICIOUS (SIMULATED): fake-paypal-verify.org
+2026-07-07 13:21:12 - SUSPICIOUS (SIMULATED): fake-support-paypal.org
+2026-07-07 13:21:52 - SUSPICIOUS (SIMULATED): fake-update-verify.org
+2026-07-07 13:22:39 - SUSPICIOUS (SIMULATED): fake-secure-support.io
+2026-07-07 13:23:24 - SUSPICIOUS (SIMULATED): fake-secure-support.org
+2026-07-07 13:23:52 - SUSPICIOUS (SIMULATED): fake-paypal-account.io
+2026-07-07 13:24:00 - SUSPICIOUS (SIMULATED): fake-bank-verify.io
+2026-07-07 13:24:25 - SUSPICIOUS (SIMULATED): fake-support-web.net
+2026-07-07 13:25:12 - SUSPICIOUS (SIMULATED): fake-web-bank.net
+2026-07-07 13:25:24 - SUSPICIOUS (SIMULATED): fake-bank-auth.xyx
+2026-07-07 13:25:44 - SUSPICIOUS (SIMULATED): fake-account-verify.com
+2026-07-07 13:25:47 - SUSPICIOUS (SIMULATED): fake-auth-bank.xyx
+2026-07-07 13:26:22 - SUSPICIOUS (SIMULATED): fake-login-bank.xyx
+2026-07-07 13:26:23 - SUSPICIOUS (SIMULATED): fake-web-paypal.com
+2026-07-07 13:26:34 - SUSPICIOUS (SIMULATED): fake-update-secure.org
+2026-07-07 13:26:34 - SUSPICIOUS (SIMULATED): fake-login-secure.org
+2026-07-07 13:27:33 - SUSPICIOUS (SIMULATED): fake-auth-web.com
+2026-07-07 13:27:52 - SUSPICIOUS (SIMULATED): fake-secure-account.net
+2026-07-07 13:28:38 - SUSPICIOUS (SIMULATED): fake-bank-account.io
+2026-07-07 13:29:19 - SUSPICIOUS (SIMULATED): fake-login-web.org
+2026-07-07 13:29:56 - SUSPICIOUS (SIMULATED): fake-support-support.xyx
+2026-07-07 13:30:27 - SUSPICIOUS (SIMULATED): fake-update-account.com
+2026-07-07 13:31:40 - SUSPICIOUS (SIMULATED): fake-update-update.net
+2026-07-07 13:33:24 - SUSPICIOUS (SIMULATED): fake-account-verify.org
+2026-07-07 13:34:03 - SUSPICIOUS (SIMULATED): fake-bank-web.xyx
+2026-07-07 13:35:42 - SUSPICIOUS (SIMULATED): fake-login-account.xyx
+2026-07-07 13:35:59 - SUSPICIOUS (SIMULATED): fake-auth-secure.xyx
+2026-07-07 13:36:26 - SUSPICIOUS (SIMULATED): fake-update-support.xyx
+2026-07-07 13:36:34 - SUSPICIOUS (SIMULATED): fake-paypal-paypal.io
+2026-07-07 19:49:18 - Websocket connected
+2026-07-07 19:49:18 - Connection established to CertStream! Listening for events...
+2026-07-07 19:50:10 - SUSPICIOUS (SIMULATED): fake-secure-update.net
+2026-07-07 19:50:19 - SUSPICIOUS (SIMULATED): fake-verify-account.net
+2026-07-07 19:50:38 - SUSPICIOUS (SIMULATED): fake-login-support.xyx
+2026-07-07 19:50:47 - SUSPICIOUS (SIMULATED): fake-account-verify.xyx
+2026-07-07 19:50:57 - SUSPICIOUS (SIMULATED): fake-secure-web.com
+2026-07-07 19:52:42 - SUSPICIOUS (SIMULATED): fake-paypal-secure.org
+2026-07-07 19:53:09 - SUSPICIOUS (SIMULATED): fake-update-verify.com
+2026-07-07 19:53:32 - SUSPICIOUS (SIMULATED): fake-bank-web.net
+2026-07-07 19:53:44 - SUSPICIOUS (SIMULATED): fake-web-account.com
+2026-07-07 19:53:44 - SUSPICIOUS (SIMULATED): fake-verify-support.xyx
+2026-07-07 19:54:40 - SUSPICIOUS (SIMULATED): fake-auth-bank.io
+2026-07-07 19:54:41 - SUSPICIOUS (SIMULATED): fake-auth-verify.org
+2026-07-07 19:54:43 - SUSPICIOUS (SIMULATED): fake-auth-secure.org
+2026-07-07 19:55:00 - SUSPICIOUS (SIMULATED): fake-secure-web.xyx
+2026-07-07 19:55:27 - SUSPICIOUS (SIMULATED): fake-verify-account.com
+2026-07-07 19:56:02 - SUSPICIOUS (SIMULATED): fake-verify-secure.io
+2026-07-07 19:57:14 - SUSPICIOUS (SIMULATED): fake-auth-login.xyx
+2026-07-07 19:57:27 - SUSPICIOUS (SIMULATED): fake-paypal-support.com
+2026-07-07 19:58:01 - SUSPICIOUS (SIMULATED): fake-paypal-bank.xyx
+2026-07-07 19:59:45 - SUSPICIOUS (SIMULATED): fake-support-secure.io
+2026-07-07 20:00:13 - SUSPICIOUS (SIMULATED): fake-bank-auth.xyx
+2026-07-07 20:00:19 - SUSPICIOUS (SIMULATED): fake-login-web.io
+2026-07-07 20:00:43 - SUSPICIOUS (SIMULATED): fake-web-secure.com
+2026-07-07 20:00:53 - SUSPICIOUS (SIMULATED): fake-login-auth.com
+2026-07-07 20:01:20 - SUSPICIOUS (SIMULATED): fake-update-support.xyx
+2026-07-07 20:01:22 - SUSPICIOUS (SIMULATED): fake-web-auth.org
+2026-07-07 20:02:41 - SUSPICIOUS (SIMULATED): fake-web-login.net
+2026-07-07 20:02:46 - SUSPICIOUS (SIMULATED): fake-paypal-verify.io
+2026-07-07 20:03:22 - SUSPICIOUS (SIMULATED): fake-account-web.org
+2026-07-07 20:03:44 - SUSPICIOUS (SIMULATED): fake-secure-secure.org
+2026-07-07 20:04:01 - SUSPICIOUS (SIMULATED): fake-support-verify.xyx
+2026-07-07 20:05:51 - SUSPICIOUS (SIMULATED): fake-account-update.net
+2026-07-07 20:09:00 - SUSPICIOUS (SIMULATED): fake-verify-bank.xyx
+2026-07-07 20:09:01 - SUSPICIOUS (SIMULATED): fake-bank-update.org
+2026-07-07 20:09:53 - SUSPICIOUS (SIMULATED): fake-login-web.com
+2026-07-07 20:10:32 - SUSPICIOUS (SIMULATED): fake-update-login.org
+2026-07-07 20:10:56 - SUSPICIOUS (SIMULATED): fake-support-auth.xyx
+2026-07-07 20:12:46 - SUSPICIOUS (SIMULATED): fake-verify-secure.com
+2026-07-07 20:13:01 - SUSPICIOUS (SIMULATED): fake-auth-web.io
+2026-07-07 20:13:37 - SUSPICIOUS (SIMULATED): fake-bank-update.xyx
+2026-07-07 20:13:41 - SUSPICIOUS (SIMULATED): fake-secure-secure.org
+2026-07-07 20:14:27 - SUSPICIOUS (SIMULATED): fake-web-login.net
+2026-07-07 20:16:50 - SUSPICIOUS (SIMULATED): fake-account-account.io
+2026-07-07 20:17:10 - SUSPICIOUS (SIMULATED): fake-secure-login.org
+2026-07-07 20:18:20 - Websocket connected
+2026-07-07 20:18:20 - Connection established to CertStream! Listening for events...
+2026-07-07 20:19:05 - SUSPICIOUS (SIMULATED): fake-update-update.org
+2026-07-07 20:19:29 - SUSPICIOUS (SIMULATED): fake-web-support.net
+2026-07-07 20:19:52 - SUSPICIOUS (SIMULATED): fake-account-paypal.org
+2026-07-09 19:45:31 - Websocket connected
+2026-07-09 19:45:31 - Connection established to CertStream! Listening for events...
+2026-07-09 19:45:35 - SUSPICIOUS (SIMULATED): fake-web-paypal.xyx
+2026-07-09 19:48:17 - SUSPICIOUS (SIMULATED): fake-login-bank.com
+2026-07-09 19:48:18 - SUSPICIOUS (SIMULATED): fake-web-support.io
+2026-07-09 19:48:20 - SUSPICIOUS (SIMULATED): fake-account-support.org
+2026-07-09 19:49:59 - SUSPICIOUS (SIMULATED): fake-update-account.io
+2026-07-09 19:50:05 - SUSPICIOUS (SIMULATED): fake-auth-verify.com
+2026-07-09 19:51:03 - SUSPICIOUS (SIMULATED): fake-update-account.com
+2026-07-09 19:51:23 - SUSPICIOUS (SIMULATED): fake-support-auth.xyx
+2026-07-09 19:51:24 - SUSPICIOUS (SIMULATED): fake-web-account.org
+2026-07-09 19:51:59 - SUSPICIOUS (SIMULATED): fake-login-verify.io
+2026-07-09 19:52:04 - SUSPICIOUS (SIMULATED): fake-update-bank.net
+2026-07-09 19:52:14 - SUSPICIOUS (SIMULATED): fake-login-auth.org
+2026-07-09 19:52:21 - SUSPICIOUS (SIMULATED): fake-paypal-paypal.com
+2026-07-09 19:53:25 - SUSPICIOUS (SIMULATED): fake-secure-paypal.org
+2026-07-09 19:54:08 - SUSPICIOUS (SIMULATED): fake-secure-bank.xyx
+2026-07-09 19:54:10 - SUSPICIOUS (SIMULATED): fake-account-paypal.org
+2026-07-09 19:54:56 - SUSPICIOUS (SIMULATED): fake-login-verify.xyx
+2026-07-09 19:55:52 - SUSPICIOUS (SIMULATED): fake-support-login.net
+2026-07-09 19:56:05 - SUSPICIOUS (SIMULATED): fake-login-paypal.org
+2026-07-09 19:56:20 - SUSPICIOUS (SIMULATED): fake-auth-verify.io
+2026-07-09 19:56:39 - SUSPICIOUS (SIMULATED): fake-verify-paypal.xyx
+2026-07-09 19:57:20 - SUSPICIOUS (SIMULATED): fake-support-auth.com
+2026-07-09 19:58:17 - SUSPICIOUS (SIMULATED): fake-secure-account.xyx
+2026-07-09 19:59:39 - SUSPICIOUS (SIMULATED): fake-login-paypal.net
+2026-07-09 20:00:45 - SUSPICIOUS (SIMULATED): fake-paypal-verify.net
+2026-07-09 20:01:47 - SUSPICIOUS (SIMULATED): fake-support-paypal.xyx
+2026-07-09 20:02:20 - SUSPICIOUS (SIMULATED): fake-update-web.org
+2026-07-09 20:19:55 - Websocket connected
+2026-07-09 20:19:55 - Connection established to CertStream! Listening for events...
+2026-07-09 20:20:00 - SUSPICIOUS (SIMULATED): fake-secure-secure.io
+2026-07-09 20:20:31 - SUSPICIOUS (SIMULATED): fake-bank-paypal.xyx
+2026-07-09 20:21:37 - SUSPICIOUS (SIMULATED): fake-secure-auth.net
+2026-07-09 20:21:38 - SUSPICIOUS (SIMULATED): fake-support-web.com
+2026-07-09 20:22:37 - SUSPICIOUS (SIMULATED): fake-login-login.io
+2026-07-09 20:23:01 - SUSPICIOUS (SIMULATED): fake-web-secure.net
+2026-07-09 20:23:42 - SUSPICIOUS (SIMULATED): fake-verify-secure.org
+2026-07-09 20:23:46 - SUSPICIOUS (SIMULATED): fake-account-login.xyx
+2026-07-09 20:24:34 - SUSPICIOUS (SIMULATED): fake-update-secure.xyx
+2026-07-09 20:25:14 - SUSPICIOUS (SIMULATED): fake-verify-web.io
+2026-07-09 20:26:55 - SUSPICIOUS (SIMULATED): fake-verify-login.net
+2026-07-09 20:28:54 - SUSPICIOUS (SIMULATED): fake-paypal-secure.net
+2026-07-09 20:28:57 - SUSPICIOUS (SIMULATED): fake-verify-login.org
+2026-07-09 20:29:18 - SUSPICIOUS (SIMULATED): fake-bank-auth.io
+2026-07-09 20:29:19 - SUSPICIOUS (SIMULATED): fake-web-verify.net
+2026-07-09 20:30:09 - SUSPICIOUS (SIMULATED): fake-login-bank.net
+2026-07-09 20:30:30 - SUSPICIOUS (SIMULATED): fake-auth-secure.io
+2026-07-09 20:31:15 - SUSPICIOUS (SIMULATED): fake-web-secure.xyx
+2026-07-09 20:31:26 - SUSPICIOUS (SIMULATED): fake-verify-update.com
+2026-07-09 20:31:56 - SUSPICIOUS (SIMULATED): fake-web-login.com
+2026-07-09 20:32:12 - SUSPICIOUS (SIMULATED): fake-paypal-bank.xyx
+2026-07-09 20:32:47 - SUSPICIOUS (SIMULATED): fake-login-secure.org
+2026-07-09 20:33:00 - SUSPICIOUS (SIMULATED): fake-bank-web.org
+2026-07-09 21:14:53 - Error connecting to CertStream - Connection to remote host was lost. - Sleeping for a few seconds and trying again...
+2026-07-09 21:14:53 - Connection to remote host was lost. - goodbye
+2026-07-09 21:14:55 - SUSPICIOUS (SIMULATED): fake-secure-account.com
+2026-07-09 21:14:58 - Error connecting to CertStream - [Errno 11001] getaddrinfo failed - Sleeping for a few seconds and trying again...
+2026-07-09 21:14:58 - [Errno 11001] getaddrinfo failed - goodbye
+2026-07-09 21:15:03 - Error connecting to CertStream - [Errno 11001] getaddrinfo failed - Sleeping for a few seconds and trying again...
+2026-07-09 21:15:03 - [Errno 11001] getaddrinfo failed - goodbye
+2026-07-09 21:15:08 - Error connecting to CertStream - [Errno 11001] getaddrinfo failed - Sleeping for a few seconds and trying again...
+2026-07-09 21:15:08 - [Errno 11001] getaddrinfo failed - goodbye

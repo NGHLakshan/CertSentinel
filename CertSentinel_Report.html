@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CertSentinel — Project Report</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* ── Page Layout ── */
+        .page {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 48px 48px;
+        }
+
+        /* ── Cover ── */
+        .cover {
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 60%, #1a1f2e 100%);
+            color: #e6edf3;
+            border-radius: 16px;
+            padding: 56px 48px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            background: rgba(230, 57, 70, .15);
+        }
+
+        .cover::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 40px;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: rgba(168, 218, 220, .08);
+        }
+
+        .cover-badge {
+            display: inline-block;
+            background: rgba(230, 57, 70, .2);
+            color: #e63946;
+            border: 1px solid rgba(230, 57, 70, .4);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .cover h1 {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .cover h1 span {
+            color: #e63946;
+        }
+
+        .cover-sub {
+            font-size: 16px;
+            color: #8b949e;
+            margin-top: 8px;
+            font-weight: 400;
+        }
+
+        .cover-meta {
+            display: flex;
+            gap: 24px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .cover-meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .cover-meta-item .label {
+            font-size: 10px;
+            color: #8b949e;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .cover-meta-item .val {
+            font-size: 13px;
+            color: #a8dadc;
+            font-weight: 600;
+        }
+
+        /* ── Sections ── */
+        .section {
+            margin-bottom: 36px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0f172a;
+            border-left: 4px solid #e63946;
+            padding-left: 12px;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 16px 0 8px;
+        }
+
+        p {
+            color: #334155;
+            margin-bottom: 10px;
+        }
+
+        /* ── Info Cards ── */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .card .icon {
+            font-size: 24px;
+            margin-bottom: 6px;
+        }
+
+        .card .title {
+            font-size: 11px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: .4px;
+        }
+
+        .card .desc {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 2px;
+        }
+
+        .card.accent {
+            border-color: #fecaca;
+            background: #fff5f5;
+        }
+
+        .card.green {
+            border-color: #bbf7d0;
+            background: #f0fdf4;
+        }
+
+        .card.blue {
+            border-color: #bfdbfe;
+            background: #eff6ff;
+        }
+
+        .card.teal {
+            border-color: #99f6e4;
+            background: #f0fdfa;
+        }
+
+        /* ── Flow Diagram ── */
+        .flow {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .flow-node {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px 14px;
+            text-align: center;
+            min-width: 110px;
+        }
+
+        .flow-node .n-icon {
+            font-size: 20px;
+        }
+
+        .flow-node .n-title {
+            font-size: 10px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-top: 4px;
+        }
+
+        .flow-node .n-sub {
+            font-size: 9px;
+            color: #94a3b8;
+        }
+
+        .flow-arrow {
+            font-size: 18px;
+            color: #94a3b8;
+            padding: 0 6px;
+        }
+
+        .flow-node.red {
+            border-color: #fecaca;
+            background: #fff5f5;
+        }
+
+        .flow-node.green {
+            border-color: #bbf7d0;
+            background: #f0fdf4;
+        }
+
+        .flow-node.blue {
+            border-color: #bfdbfe;
+            background: #eff6ff;
+        }
+
+        .flow-node.teal {
+            border-color: #99f6e4;
+            background: #f0fdfa;
+        }
+
+        /* ── Tables ── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 16px;
+        }
+
+        th {
+            background: #f1f5f9;
+            text-align: left;
+            padding: 9px 12px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            color: #64748b;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        td {
+            padding: 9px 12px;
+            border-bottom: 1px solid #f1f5f9;
+            color: #334155;
+            font-size: 13px;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .badge.done {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+
+        .badge.future {
+            background: #dbeafe;
+            color: #2563eb;
+        }
+
+        .badge.soon {
+            background: #fef9c3;
+            color: #b45309;
+        }
+
+        /* ── Code block ── */
+        pre {
+            background: #0d1117;
+            color: #e6edf3;
+            border-radius: 10px;
+            padding: 16px 20px;
+            font-size: 12px;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            overflow-x: auto;
+            margin-bottom: 12px;
+        }
+
+        .comment {
+            color: #8b949e;
+        }
+
+        .kw {
+            color: #a8dadc;
+        }
+
+        .str {
+            color: #f4a261;
+        }
+
+        /* ── Highlight box ── */
+        .highlight {
+            background: linear-gradient(135deg, #fff5f5, #fff);
+            border: 1px solid #fecaca;
+            border-left: 4px solid #e63946;
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            font-size: 13px;
+            color: #1e293b;
+        }
+
+        .highlight strong {
+            color: #e63946;
+        }
+
+        /* ── Footer ── */
+        .footer {
+            margin-top: 48px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        /* ── Print ── */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page {
+                padding: 20px;
+            }
+
+            .cover {
+                border-radius: 8px;
+            }
+
+            h2 {
+                break-before: auto;
+            }
+
+            .section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <!-- ── Cover ── -->
+        <div class="cover">
+            <div class="cover-badge">🛡️ Cybersecurity Project</div>
+            <h1>Cert<span>Sentinel</span></h1>
+            <p class="cover-sub">Real-time SSL Certificate Threat Monitor</p>
+
+            <div class="cover-meta">
+                <div class="cover-meta-item">
+                    <span class="label">Type</span>
+                    <span class="val">Cybersecurity / Data Analytics</span>
+                </div>
+                <div class="cover-meta-item">
+                    <span class="label">Backend</span>
+                    <span class="val">Python · FastAPI · WebSocket</span>
+                </div>
+                <div class="cover-meta-item">
+                    <span class="label">Frontend</span>
+                    <span class="val">React · Vite · Recharts</span>
+                </div>
+                <div class="cover-meta-item">
+                    <span class="label">Data Source</span>
+                    <span class="val">CertStream (SSL Certificate Feed)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── 1. What is CertSentinel ── -->
+        <div class="section">
+            <h2>1. CertSentinel කියන්නේ මොකක්ද?</h2>
+            <p>
+                Internet එකේ ඕනෑම website SSL Certificate issue කරද්දී (HTTPS setup කරද්දී), ඒ information public ව
+                <strong>Certificate Transparency Logs</strong> ලා publish වෙනවා. CertSentinel ඒ logs real-time ලා
+                monitor කරලා phishing/fraud domains <strong>automatically detect</strong> කරනවා.
+            </p>
+
+            <div class="highlight">
+                <strong>Real-world example:</strong> Attacker කෙනෙකු <em>fake-login-bank.com</em> create කරලා
+                real bank site ලා mimic කරනවා → users trick කරලා passwords steal කරනවා.
+                CertSentinel ඒ domain certificate issue වෙන <strong>ඒ moment ම</strong> catch කරනවා.
+            </div>
+
+            <div class="cards">
+                <div class="card accent">
+                    <div class="icon">🎯</div>
+                    <div class="title">Purpose</div>
+                    <div class="desc">Phishing Domain Detection</div>
+                </div>
+                <div class="card green">
+                    <div class="icon">⚡</div>
+                    <div class="title">Speed</div>
+                    <div class="desc">Real-time (< 1 second)</div>
+                    </div>
+                    <div class="card blue">
+                        <div class="icon">🌐</div>
+                        <div class="title">Coverage</div>
+                        <div class="desc">Global SSL Certificates</div>
+                    </div>
+                    <div class="card teal">
+                        <div class="icon">📊</div>
+                        <div class="title">Dashboard</div>
+                        <div class="desc">Live Analytics</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 2. System Architecture ── -->
+            <div class="section">
+                <h2>2. System Architecture සහ Data Flow</h2>
+                <p><strong>Data ගලා ඒමේ හරියටම path</strong> — Internet සිට Dashboard දක්වා:</p>
+
+                <div class="flow">
+                    <div class="flow-node blue">
+                        <div class="n-icon">🌐</div>
+                        <div class="n-title">CertStream</div>
+                        <div class="n-sub">Global SSL Feed</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node red">
+                        <div class="n-icon">🐍</div>
+                        <div class="n-title">hunter.py</div>
+                        <div class="n-sub">FastAPI Backend</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node green">
+                        <div class="n-icon">🔍</div>
+                        <div class="n-title">Filter Engine</div>
+                        <div class="n-sub">Keyword Detection</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node teal">
+                        <div class="n-icon">📡</div>
+                        <div class="n-title">WebSocket</div>
+                        <div class="n-sub">ws://localhost:8000</div>
+                    </div>
+                    <div class="flow-arrow">→</div>
+                    <div class="flow-node blue">
+                        <div class="n-icon">⚛️</div>
+                        <div class="n-title">React Dashboard</div>
+                        <div class="n-sub">localhost:5173</div>
+                    </div>
+                </div>
+
+                <h3>Step-by-step Data Flow</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Location</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>CertStream (Internet)</td>
+                            <td>ලොව ඕනෑ SSL Certificate issue වෙද්දී certificate data publish කරයි</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>hunter.py</td>
+                            <td>CertStream WebSocket subscribe කරලා live data stream receive කරයි</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>Filter Engine</td>
+                            <td>Domain name "login", "bank", "verify", "secure" keywords scan කරයි</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>hunter.py</td>
+                            <td>Suspicious නම් TLD + keyword extract කරලා payload build කරයි</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>WebSocket Broadcast</td>
+                            <td>All connected clients ලාට JSON alert push කරයි</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6</strong></td>
+                            <td>React (App.jsx)</td>
+                            <td>Duplicate filter කරලා state update + charts refresh කරයි</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7</strong></td>
+                            <td>Dashboard</td>
+                            <td>User real-time charts, alerts, badges දකී</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ── 3. Tech Stack ── -->
+            <div class="section">
+                <h2>3. Tech Stack</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Layer</th>
+                            <th>Technology</th>
+                            <th>කාර්යය</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Data Source</td>
+                            <td>CertStream API</td>
+                            <td>Global SSL certificate real-time feed</td>
+                        </tr>
+                        <tr>
+                            <td>Backend</td>
+                            <td>Python + FastAPI</td>
+                            <td>API server + business logic</td>
+                        </tr>
+                        <tr>
+                            <td>Real-time</td>
+                            <td>WebSocket (FastAPI)</td>
+                            <td>Server → Client push communication</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>Python smtplib + Gmail</td>
+                            <td>First threat detection email alert</td>
+                        </tr>
+                        <tr>
+                            <td>Logging</td>
+                            <td>Python logging</td>
+                            <td>suspicious_domains.log file</td>
+                        </tr>
+                        <tr>
+                            <td>Frontend</td>
+                            <td>React + Vite</td>
+                            <td>SPA dashboard</td>
+                        </tr>
+                        <tr>
+                            <td>Charts</td>
+                            <td>Recharts</td>
+                            <td>Line, Bar, Pie charts</td>
+                        </tr>
+                        <tr>
+                            <td>Styling</td>
+                            <td>Vanilla CSS</td>
+                            <td>Dark theme, responsive design</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ── 4. Features ── -->
+            <div class="section">
+                <h2>4. Current Features</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>📈 Alerts Over Time</td>
+                            <td>1-minute bucket line chart — threat trend</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>🔑 Keyword Frequency</td>
+                            <td>Top phishing words bar chart</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>🌐 TLD Breakdown</td>
+                            <td>Domain extension donut pie chart</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>⚡ Alert Rate</td>
+                            <td>Live alerts/min counter</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>🔍 Domain Search</td>
+                            <td>Real-time filter in alert feed</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>💾 Export CSV</td>
+                            <td>Download all alerts as CSV file</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>🏷️ Keyword + TLD Badges</td>
+                            <td>Per-alert label badges</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>📧 Email Alert</td>
+                            <td>First detection → Gmail email notify</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>📝 Log File</td>
+                            <td>All suspicious domains log to file</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>🔄 Auto-reconnect</td>
+                            <td>WebSocket drop → 3s auto reconnect</td>
+                            <td><span class="badge done">✅ Done</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ── 5. Future Enhancements ── -->
+            <div class="section">
+                <h2>5. Future Enhancements</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Description</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🤖 ML Risk Score</td>
+                            <td>Machine Learning model (Random Forest) — domain pattern 0–100 risk score</td>
+                            <td><span class="badge soon">🔥 High</span></td>
+                        </tr>
+                        <tr>
+                            <td>🗺️ GeoIP Map</td>
+                            <td>Domain registered country → world heatmap (MaxMind DB)</td>
+                            <td><span class="badge soon">🔥 High</span></td>
+                        </tr>
+                        <tr>
+                            <td>🔔 Desktop Notifications</td>
+                            <td>Browser push notification for high-severity alerts</td>
+                            <td><span class="badge future">📌 Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td>🗃️ Database Storage</td>
+                            <td>SQLite/PostgreSQL — persist all alerts across sessions</td>
+                            <td><span class="badge soon">🔥 High</span></td>
+                        </tr>
+                        <tr>
+                            <td>📱 Mobile Responsive</td>
+                            <td>Full mobile-friendly layout</td>
+                            <td><span class="badge future">📌 Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td>🔑 Keyword Config UI</td>
+                            <td>Dashboard settings panel — add/remove phishing keywords live</td>
+                            <td><span class="badge future">📌 Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td>📊 Historical Analytics</td>
+                            <td>Daily/weekly threat trend charts with stored data</td>
+                            <td><span class="badge future">📌 Medium</span></td>
+                        </tr>
+                        <tr>
+                            <td>🌙 WHOIS Lookup</td>
+                            <td>Domain age check — newly registered = higher risk</td>
+                            <td><span class="badge future">📌 Low</span></td>
+                        </tr>
+                        <tr>
+                            <td>☁️ Cloud Deploy</td>
+                            <td>Deploy to AWS/GCP/Railway — 24/7 monitoring</td>
+                            <td><span class="badge future">📌 Low</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ── 6. How to Run ── -->
+            <div class="section">
+                <h2>6. Run කරන්නේ කොහොමද?</h2>
+                <p><strong>Terminals 2ක් ඕනෑ</strong> — backend සහ frontend වෙන් වෙන්ව run කරන්න:</p>
+
+                <h3>Terminal 1 — Backend</h3>
+                <pre><span class="comment"># Step 1 — backend folder ලා යන්න</span>
+cd D:\StreamAnalytics\backend
+
+<span class="comment"># Step 2 — server start කරන්න</span>
+python hunter.py
+
+<span class="comment"># ✅ Expected output:</span>
+<span class="str">INFO:     Uvicorn running on http://0.0.0.0:8000
+🔌 Client connected. Total: 1</span></pre>
+
+                <h3>Terminal 2 — Frontend</h3>
+                <pre><span class="comment"># Step 1 — frontend folder ලා යන්න</span>
+cd D:\StreamAnalytics\frontend
+
+<span class="comment"># Step 2 — dev server start කරන්න</span>
+npm run dev
+
+<span class="comment"># ✅ Expected output:</span>
+<span class="str">VITE v5.x  ready
+➜  Local: http://localhost:5173/</span></pre>
+
+                <h3>Browser</h3>
+                <pre><span class="str">http://localhost:5173</span>  <span class="comment">← Dashboard open කරන්න</span></pre>
+
+                <h3>Port Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Port</th>
+                            <th>Service</th>
+                            <th>URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>8000</strong></td>
+                            <td>FastAPI Backend</td>
+                            <td>http://localhost:8000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5173</strong></td>
+                            <td>React Frontend</td>
+                            <td>http://localhost:5173</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ── 7. File Structure ── -->
+            <div class="section">
+                <h2>7. File Structure</h2>
+                <pre>D:\StreamAnalytics\
+├── backend\
+│   ├── hunter.py               <span class="comment">← FastAPI server + CertStream + WebSocket</span>
+│   └── suspicious_domains.log  <span class="comment">← All detected domains log</span>
+├── frontend\
+│   ├── src\
+│   │   ├── App.jsx             <span class="comment">← React dashboard (main component)</span>
+│   │   └── index.css           <span class="comment">← All styles (dark theme + charts)</span>
+│   ├── index.html              <span class="comment">← Browser tab title</span>
+│   └── vite.config.js          <span class="comment">← Vite configuration</span>
+└── Key.env                     <span class="comment">← Email credentials (private)</span></pre>
+            </div>
+
+            <!-- ── Footer ── -->
+            <div class="footer">
+                <span>CertSentinel — Real-time SSL Threat Monitor</span>
+                <span>Python · FastAPI · React · Recharts · WebSocket</span>
+            </div>
+
+        </div>
+
+        <!-- Print button (hidden in print) -->
+        <div style="position:fixed;bottom:24px;right:24px;print:none;">
+            <button onclick="window.print()"
+                style="background:#e63946;color:#fff;border:none;border-radius:10px;padding:12px 22px;font-size:14px;font-weight:700;cursor:pointer;box-shadow:0 4px 16px rgba(230,57,70,.4);">
+                🖨️ PDF ලෙස Save කරන්න
+            </button>
+        </div>
+
+</body>
+
+</html>
