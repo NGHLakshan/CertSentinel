@@ -15,3 +15,4 @@ Timestamp,Domain,Original_URL,Risk_Score,Verdict,Matched_Keywords,Features
 2026-07-10 19:44:47,www.fiverr.com,https://www.fiverr.com/users/hasindu_hq/seller_dashboard,0,SAFE 🟢,None,"{""length"": 6, ""entropy"": 2.2516291673878226, ""num_digits"": 0, ""num_hyphens"": 0, ""has_sus_keyword"": 0}"
 2026-07-10 19:44:54,www.fiverr.com,https://www.fiverr.com,0,SAFE 🟢,None,"{""length"": 6, ""entropy"": 2.2516291673878226, ""num_digits"": 0, ""num_hyphens"": 0, ""has_sus_keyword"": 0}"
 2026-07-10 19:47:35,www.fiverr.com,https://www.fiverr.com,0,SAFE 🟢,None,"{""length"": 6, ""entropy"": 2.2516291673878226, ""num_digits"": 0, ""num_hyphens"": 0, ""has_sus_keyword"": 0}"
+2026-07-10 19:59:39,www.fiverr.com,https://www.fiverr.com/users/hasindu_hq/seller_dashboard,0,SAFE 🟢,None,"{""length"": 6, ""entropy"": 2.2516291673878226, ""num_digits"": 0, ""num_hyphens"": 0, ""has_sus_keyword"": 0}"
